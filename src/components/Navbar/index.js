@@ -5,7 +5,7 @@ import "./style.css";
 function Navbar(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand m-auto" to="/">
                 AmaZing Employee Directory!
         </Link>
             <div>
@@ -18,20 +18,7 @@ function Navbar(props) {
                             Directory
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/sort"
-                        className={window.location.pathname === "/sort" ? "nav-link active" : "nav-link"}
-                        >
-                            Sort
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/filter"
-                        className={window.location.pathname === "/filter" ? "nav-link active" : "nav-link"}
-                        >
-                            Filter
-                        </Link>
-                    </li>
+                  
                 </ul>
             </div>
         </nav>

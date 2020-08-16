@@ -10,7 +10,9 @@ class Table extends Component {
                 { id: 2, name: 'Phillip Patterson', department: 'finance', email: 'Phillip@email.com' },
                 { id: 3, name: 'Ed Sands', department: 'marketing', email: 'Ed@email.com' },
                 { id: 4, name: 'Nancy Rodriguez', department: 'marketing', email: 'Nancy@email.com' },
-                { id: 5, name: 'Pablo Sanchez', department: 'engineer', email: 'Pablo@email.com' }
+                { id: 5, name: 'Pablo Sanchez', department: 'engineer', email: 'Pablo@email.com' },
+                { id: 6, name: 'Nancy Rodriguez', department: 'marketing', email: 'Nancy@email.com' },
+                { id: 7, name: 'Pablo Sanchez', department: 'engineer', email: 'Pablo@email.com' }
             ]
         }
     }
@@ -38,8 +40,8 @@ class Table extends Component {
 
     render() {
         return (
-            <div >
-                <h1 id='title'>Employee Table</h1>
+            <div>
+                <h4 id='title'>Employee Table</h4>
                 <table id='employees'>
                     <tbody>
                         <tr>{this.renderTableHeader()}</tr>
