@@ -2,7 +2,7 @@ import React from "react";
 
 
 function TableData(props) {
-    return props.state.employees.map((employees, index) => {
+    return props.employees.map((employees, index) => {
         const { id, name, department, email } = employees
         return (
             <tr key={id}>

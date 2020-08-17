@@ -15,13 +15,16 @@ class Table extends Component {
             <div>
                 <h4 id='title'>Employee Table</h4>
                 <table id='employees'>
-                    <tbody>
+                    <TableHeader
+                    state={this.state}
+                    />
+                    {/* <tbody>
                         <TableHeader  
                         state={this.state}
                         sortTable={this.SortTable}
                         />
                         <TableData state={this.state} />
-                    </tbody>
+                    </tbody> */}
                 </table>
             </div>
         );
