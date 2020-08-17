@@ -5,10 +5,10 @@ import TableHeader from "../TableHeader";
 import TableData from "../TableData";
 
 class Table extends Component {
-        state = {
-            employees
-        };
-    
+    state = {
+        employees
+    };
+
 
     render() {
         return (
@@ -16,15 +16,8 @@ class Table extends Component {
                 <h4 id='title'>Employee Table</h4>
                 <table id='employees'>
                     <TableHeader
-                    state={this.state}
-                    />
-                    {/* <tbody>
-                        <TableHeader  
                         state={this.state}
-                        sortTable={this.SortTable}
-                        />
-                        <TableData state={this.state} />
-                    </tbody> */}
+                    />
                 </table>
             </div>
         );
