@@ -8,24 +8,6 @@ class Table extends Component {
         state = {
             employees
         };
-
-
-  
-    
-    SortTable(props) {
-        let sortedEmployees = [...this.state.employees];
-        sortedEmployees.sort((a,b) => {
-            if(a.name < b.name) {
-                return -1;
-            }
-            if(a.name > b.name) {
-                return 1;
-            }
-            return 0;
-        });
-        
-    }
-
     
 
     render() {
@@ -34,7 +16,10 @@ class Table extends Component {
                 <h4 id='title'>Employee Table</h4>
                 <table id='employees'>
                     <tbody>
-                        <tr><TableHeader  state={this.state}/></tr>
+                        <TableHeader  
+                        state={this.state}
+                        sortTable={this.SortTable}
+                        />
                         <TableData state={this.state} />
                     </tbody>
                 </table>
