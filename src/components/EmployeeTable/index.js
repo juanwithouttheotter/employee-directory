@@ -5,8 +5,7 @@ import "./style.css"
 
 class Table extends Component {
     state = {
-        employees,
-        search: ""
+        employees
     };
     
     render() {
