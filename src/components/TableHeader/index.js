@@ -4,13 +4,12 @@ import TableData from "../TableData";
 
 function TableHeader(props) {
     const  employees  = props.employees;
-    const [sortedEmployees, setSortedEmployees] = useState(employees);
-
+    
     const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
 
-    if (sortedEmployees !== null) {
+    if (employees !== null) {
 
-        sortedEmployees.sort((a, b) => {
+        employees.sort((a, b) => {
 
             if (a[sortConfig.key] > b[sortConfig.key]) {
                 return sortConfig.direction === 'ascending' ? -1 : 1;
@@ -40,7 +39,7 @@ function TableHeader(props) {
                 <th key="DEPARTMENT" onClick={() => reqSort('department')}>DEPARTMENT</th>
                 <th key="EMAIL" onClick={() => reqSort('email')}>EMAIL</th>
             </tr>
-            <TableData employees={sortedEmployees} />
+            <TableData employees={employees} />
         </tbody>
     );
 }

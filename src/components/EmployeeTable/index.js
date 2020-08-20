@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import employees from "../../models/employees.json"
-import TableHeader from "../TableHeader";
 import TableFilter from "../TableFilter";
 import "./style.css"
 
