@@ -1,9 +1,9 @@
-import React, { useState, setState } from "react";
+import React, { useState} from "react";
 import TableData from "../TableData";
 
 
 function TableHeader(props) {
-    const { employees } = props.state;
+    const  employees  = props.employees;
     const [sortedEmployees, setSortedEmployees] = useState(employees);
 
     const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
@@ -12,13 +12,11 @@ function TableHeader(props) {
 
         sortedEmployees.sort((a, b) => {
 
-            console.log(a[sortConfig.key] + " and " + b[sortConfig.key])
             if (a[sortConfig.key] > b[sortConfig.key]) {
                 return sortConfig.direction === 'ascending' ? -1 : 1;
             }
 
             if (b[sortConfig.key] > a[sortConfig.key]) {
-                console.log("here");
                 return sortConfig.direction === 'ascending' ? 1 : -1;
             }
 
