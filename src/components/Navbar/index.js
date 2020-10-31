@@ -11,8 +11,8 @@ function Navbar(props) {
             <div>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to="/" className={
-                            window.location.pathname === "/" || window.location.pathname === "/home" ? "nav-link active" : "nav-link"
+                        <Link to="/employee-directory" className={
+                            window.location.pathname === "/employee-directory" || window.location.pathname === "/home" ? "nav-link active" : "nav-link"
                             }
                         >
                             Directory
